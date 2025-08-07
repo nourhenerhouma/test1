@@ -1,0 +1,43 @@
+{% extends 'myapp1/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+  .home-section {
+    background-image: url("{% static 'images/background1.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: right;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+
+  .highlight-name {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+  }
+</style>
+
+<div class="home-section">
+  <p>Hi, I'm <span class="highlight-name">Nourhene Rhouma</span> a developer.</p>
+  <p>Welcome to my world.</p>
+  <img src="{% static 'images/profile.jpg' %}" alt="My Photo"
+   style="width: 370px; height: 370px; border-radius: 50%; margin-top: 20px; object-fit: cover;">
+</div>
+{% endblock %}

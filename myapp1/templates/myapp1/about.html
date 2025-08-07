@@ -1,0 +1,40 @@
+{% extends 'myapp1/base.html' %}
+
+{% block title %}about{% endblock %}
+{% load static %}
+{% block content %}
+
+
+  <div style="background-image: url('{% static 'images/background1.jpg' %}'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;">
+  <style>
+    .circle-text {
+      width: 535px;
+      height: 535px;
+      border-radius: 70%;
+      background-color: #d3d3d3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      margin: 40px auto;
+      box-sizing: border-box;
+    }
+
+    .circle-text p {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+   </style>
+  <div class="circle-text">
+    <h1>About Me</h1>
+     <p>
+         I'm a passionate and detail-oriented programmer with a    strong foundation in Python, SQL, HTML, and CSS. I specialize in backend development using Django, and I’m experienced in working with data using libraries like Pandas. My technical skillset is complemented by my ability to manage projects efficiently using tools like Jira. Whether it’s building dynamic web applications or analyzing complex datasets, I’m committed to writing clean, efficient, and scalable code..
+
+    </p>
+  </div>
+</div>
+{% endblock %}

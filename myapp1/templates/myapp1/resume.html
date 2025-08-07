@@ -1,0 +1,10 @@
+{% extends 'myapp1/base.html' %}
+{% load static %}
+
+{% block title %}Resume{% endblock %}
+{% block content %}
+ <div style="background-image: url('{% static 'images/background1.jpg' %}'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;">
+<div style="text-align: right; padding: 20px;">
+ <a href="{% static 'files/nourhene_resume.pdf' %}" download 
+       style="...">Download Resume</a></div>
+{% endblock %}

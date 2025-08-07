@@ -1,0 +1,44 @@
+{% extends 'myapp1/base.html' %}
+
+{% block title %}Contact{% endblock %}
+{% load static %}
+
+{% block content %}
+ <div style="background-image: url('{% static 'images/background1.jpg' %}'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;">
+  
+ <style>
+    .circle-text {
+  width: 550px;
+  height: 550px;
+  border-radius: 70%;
+  background-color: #d3d3d3;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+    .circle-text p {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+   </style>
+  <div class="circle-text">
+     <h1 style="text-align: center; color: Black;">Contact    Me</h1>
+     <p>I'd love to hear from you! Feel free to reach out with      any  questions, collaborations, or opportunities.</p> 
+    <p> Email : <a href="mailto:nourhene.rhouma@yahoo.com"> nourhene.rhouma@yahoo.com</a></p>
+<p>
+<a href="https://www.linkedin.com/in/nourhene-rhouma-068b70296/" target="_blank">
+  <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn" style="width: 30px; height: 30px;">
+</a>
+</p>
+   </p>
+ </div>
+</div>
+
+{% endblock %}
