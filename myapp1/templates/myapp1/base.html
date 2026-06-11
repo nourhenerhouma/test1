@@ -1,14 +1,28 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>{% block title %}My Site{% endblock %}</title>
+
     <style>
-         .navbar {
-            display: flex;
-            justify-content: flex-end;  /* fixed typo here */
-            align-items: center;
-            background-color: transparent;
+        /* Background image for the entire website */
+        body {
+            background-image: url("{% static 'images/background1.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
             padding: 15px 20px;
         }
 
@@ -41,9 +55,15 @@
         .nav-menu li a:hover {
             color: #FF0000;
         }
+
+        .content {
+            padding: 20px;
+        }
     </style>
 </head>
+
 <body>
+
     <nav class="navbar">
         <ul class="nav-menu">
             <li><a href="{% url 'home' %}">Home</a></li>
@@ -52,7 +72,13 @@
             <li><a href="{% url 'resume' %}">Resume</a></li>
         </ul>
     </nav>
+
     <hr>
-    {% block content %}{% endblock %}
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
 </body>
 </html>

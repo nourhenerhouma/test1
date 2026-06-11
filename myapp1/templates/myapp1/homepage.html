@@ -4,40 +4,77 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
 <style>
-  .home-section {
-    background-image: url("{% static 'images/background1.jpg' %}");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
-    padding: 20px;
-    text-align: right;
-    color: black;
-    font-size: 22px;
-    font-weight: bold;
-  }
+    .home-section {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 20px 0 0; /* top right bottom left */
+    }
 
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 20px;
-  }
+    .right-section {
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .highlight-name {
-    color: red;
-    font-size: 26px;
-    font-weight: bold;
-  }
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .text-content {
+        margin-top: 20px;
+        text-align: center;
+        color: black;
+    }
+
+    .highlight-name {
+        color: red;
+    }
+
+    .text-content h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .text-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .text-content p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
 </style>
 
 <div class="home-section">
-  <p>Hi, I'm <span class="highlight-name">Nourhene Rhouma</span> a developer.</p>
-  <p>Welcome to my world.</p>
-  <img src="{% static 'images/profile.jpg' %}" alt="My Photo"
-   style="width: 370px; height: 370px; border-radius: 50%; margin-top: 20px; object-fit: cover;">
+    <div class="right-section">
+
+        <img src="{% static 'images/profile.jpg' %}"
+             alt="My Photo"
+             class="profile-pic">
+
+        <div class="text-content">
+            <h1>Hi, I'm <span class="highlight-name">Nourhene Rhouma</span></h1>
+
+            <h2>Software Developer & Quality Assurance Engineer</h2>
+
+            <p>
+                Welcome to my portfolio, where I showcase my projects,
+                skills, and professional journey.
+            </p>
+
+            <p>Welcome to my world.</p>
+        </div>
+
+    </div>
 </div>
+
 {% endblock %}

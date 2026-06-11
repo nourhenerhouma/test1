@@ -2,9 +2,25 @@
 {% load static %}
 
 {% block title %}Resume{% endblock %}
+
 {% block content %}
- <div style="background-image: url('{% static 'images/background1.jpg' %}'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;">
-<div style="text-align: right; padding: 20px;">
- <a href="{% static 'files/nourhene_resume.pdf' %}" download 
-       style="...">Download Resume</a></div>
+
+
+    <div style="text-align: right;">
+       <a href="{% static 'files/Nourhene_Rhouma_CV.pdf' %}"
+   download="Nourhene_Rhouma_CV.pdf"
+   style="
+      background-color: #007BFF;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        Download Resume
+        </a>
+
+
+</div>
+
 {% endblock %}

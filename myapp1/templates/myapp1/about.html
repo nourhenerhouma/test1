@@ -1,40 +1,47 @@
 {% extends 'myapp1/base.html' %}
 
-{% block title %}about{% endblock %}
+{% block title %}About{% endblock %}
 {% load static %}
+
 {% block content %}
 
 
-  <div style="background-image: url('{% static 'images/background1.jpg' %}'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;">
-  <style>
-    .circle-text {
-      width: 535px;
-      height: 535px;
-      border-radius: 70%;
-      background-color: #d3d3d3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      margin: 40px auto;
-      box-sizing: border-box;
-    }
+    <style>
+        .circle-text {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;   /* Move content to the right */
+            padding: 50px;
+            box-sizing: border-box;
+        }
 
-    .circle-text p {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      text-align: justify;
-    }
-   </style>
-  <div class="circle-text">
-    <h1>About Me</h1>
-     <p>
-         I'm a passionate and detail-oriented programmer with a    strong foundation in Python, SQL, HTML, and CSS. I specialize in backend development using Django, and I’m experienced in working with data using libraries like Pandas. My technical skillset is complemented by my ability to manage projects efficiently using tools like Jira. Whether it’s building dynamic web applications or analyzing complex datasets, I’m committed to writing clean, efficient, and scalable code..
+        .paragraph-container {
+            width: 500px;
+            margin-right: 10px;      /* Distance from right edge */
+            margin-top: -100px;       /* Move down */
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+            text-align: justify;
+        }
 
-    </p>
-  </div>
+        .paragraph-container h1 {
+            margin-bottom: 30px;
+        }
+    </style>
+
+    <div class="circle-text">
+
+        <div class="paragraph-container">
+
+            <h1>About Me</h1>
+
+            <p>
+                I am a motivated and detail-oriented entry-level Software Developer and Quality Assurance professional with hands-on experience in Python, Django, Java, JavaScript, SQL, HTML, and CSS. I have knowledge of manual testing, API testing, and test automation using Selenium WebDriver. I am familiar with REST and SOAP APIs, Agile methodologies, SDLC, STLC, and tools such as Jira and ALM. Passionate about continuous learning and problem-solving, I am eager to contribute to developing and delivering high-quality software solutions.
+            </p>
+
+        </div>
+
 </div>
+
 {% endblock %}
